@@ -1,10 +1,10 @@
-<h1>{{title}}</h1>
-<div></div>
-<h3>A soma é {{ 1 + 1 }}</h3>
-<div></div>
-<p>{{exibirNome()}}</p>
-<img [src] = "logo">
+<input type="text" [(ngModel)]="curso">
+<button type="button" (click)="addCurso()">Add curso</button>
 <br>
-<button (click)="exibirAlerta()">Alertar</button>
-<p>Texto exibir</p>
-<button (click)="hideInformacoes()">Exibir paragrafo</button>
+<br>
+<span>{{verificacao()}}</span>
+<p>Lista de: <span>{{cursos.length}}</span></p>
+<br>
+<ul>
+  <li *ngFor="let item of cursos">{{item}}</li>
+</ul>

@@ -3,27 +3,26 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.css'],
 })
+
 export class AppComponent {
   title = 'Programação WEB III';
   logo = "favicon.ico";
-  exibe = true;
 
-  exibirNome(){
-    return 'Bruno e Marcos';
+  cursos : string[] = [];
+  curso = "";
+  legenda = ""
+
+  addCurso(){
+    this.cursos.push(this.curso)
   }
-
-  exibirAlerta(){
-    alert("Hoje vou adotar um anao!");
-  }
-
-  hideInformacoes(){
-    if(this.exibe == false){
-      this.exibe = true;
+  verificacao(){
+    if(this.cursos.length == 0){
+      this.legenda = "Não há cursos disponiveis"
+    }else if(this.cursos.length >= 0){
+      this.legenda = "Há cursos disponiveis!"
     }
-    else if(this.exibe == true){
-      this.exibe = false;
-    }
+    return this.legenda;
   }
 }
