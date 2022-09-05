@@ -25,4 +25,7 @@ export class AppComponent {
     }
     return this.legenda;
   }
+  limparCursos(){
+    this.cursos.length = 0
+  }
 }

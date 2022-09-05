@@ -1,5 +1,5 @@
-<input type="text" [(ngModel)]="curso">
-<button type="button" (click)="addCurso()">Add curso</button>
+<!-- <input type="text" id="input" [(ngModel)]="curso">
+<button type="button" id="btnAdd"  (click)="addCurso()">Add curso</button><button type="button" id="btnLimpar" (click)="limparCursos()">Limpar cursos</button>
 <br>
 <br>
 <span>{{verificacao()}}</span>
@@ -8,3 +8,16 @@
 <ul>
   <li *ngFor="let item of cursos">{{item}}</li>
 </ul>
+<br>
+<style>
+  #btnLimpar{
+    margin-left: 5px;
+  }
+  #btnAdd{
+    margin-left: 5px;
+  }
+</style> -->
+
+<app-header></app-header>
+<app-content></app-content>
+<app-footer></app-footer>
